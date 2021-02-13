@@ -1,12 +1,11 @@
-import { BrowserRouter, Switch, Route, Redirect } from "react-router-dom";
-import Home from "./pages/Home";
-import UserDetail from "./pages/UserDetail";
-import EpisodeDetail from "./pages/EpisodeDetail";
-import DetailedUserHeader from "./components/DetailedUserHeader";
+import { BrowserRouter, Switch, Route, Redirect } from 'react-router-dom'
+import Home from './pages/Home'
+import UserDetail from './pages/UserDetail'
+import EpisodeDetail from './pages/EpisodeDetail'
+import DetailedUserHeader from './components/DetailedUserHeader'
 
-const Router = () => {
-
-  return <BrowserRouter>
+const Router = () => (
+  <BrowserRouter>
     <Switch>
       <Route exact path="/search">
         <Home />
@@ -28,7 +27,7 @@ const Router = () => {
         </div>
       </Route>
     </Switch>
-  </BrowserRouter>;
-};
+  </BrowserRouter>
+)
 
-export default Router;
+export default Router

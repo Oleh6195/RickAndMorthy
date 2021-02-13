@@ -1,10 +1,10 @@
-import "./Search.scss";
-import PropTypes from "prop-types";
+import './Search.scss'
+import PropTypes from 'prop-types'
 
 const Search = ({ value, setValue }) => {
   const handleChange = ({ target: { value } }) => {
-    setValue(value);
-  };
+    setValue(value)
+  }
   return (
     <div className="Search">
       <input
@@ -14,12 +14,12 @@ const Search = ({ value, setValue }) => {
         onChange={handleChange}
       />
     </div>
-  );
-};
+  )
+}
 
 Search.propTypes = {
   value: PropTypes.string.isRequired,
-  setValue: PropTypes.func.isRequired
-};
+  setValue: PropTypes.func.isRequired,
+}
 
-export default Search;
+export default Search

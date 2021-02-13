@@ -1,10 +1,10 @@
-import "./DetailedUserHeader.scss";
-import { ReactComponent as Logo } from "../../assets/icons/logo.svg";
+import './DetailedUserHeader.scss'
+import { ReactComponent as Logo } from '../../assets/icons/logo.svg'
 
-const DetailedUserHeader = () => {
-  return <div className="DetailedUserHeader">
+const DetailedUserHeader = () => (
+  <div className="DetailedUserHeader">
     <Logo className="DetailedUserHeader__logo" />
-  </div>;
-};
+  </div>
+)
 
-export default DetailedUserHeader;
+export default DetailedUserHeader

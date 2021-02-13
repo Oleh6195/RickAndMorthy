@@ -1,18 +1,18 @@
-import "./InfoView.scss";
-import InfoLabel from "../InfoLabel";
-import InfoValue from "../InfoValue/InfoValue";
-import PropTypes from "prop-types";
+import './InfoView.scss'
+import PropTypes from 'prop-types'
+import InfoLabel from '../InfoLabel'
+import InfoValue from '../InfoValue/InfoValue'
 
-const InfoView = ({ label, value }) => {
-  return <div className="InfoView">
+const InfoView = ({ label, value }) => (
+  <div className="InfoView">
     <InfoLabel text={label} />
     <InfoValue text={value} />
-  </div>;
-};
+  </div>
+)
 
 InfoView.propTypes = {
   label: PropTypes.string.isRequired,
-  value: PropTypes.string.isRequired
-};
+  value: PropTypes.string.isRequired,
+}
 
-export default InfoView;
+export default InfoView

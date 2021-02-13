@@ -1,12 +1,10 @@
-import "./InfoValue.scss";
-import PropTypes from "prop-types";
+import './InfoValue.scss'
+import PropTypes from 'prop-types'
 
-const InfoValue = ({ text }) => {
-  return <p className="InfoValue">{text}</p>;
-};
+const InfoValue = ({ text }) => <p className="InfoValue">{text}</p>
 
 InfoValue.propTypes = {
-  text: PropTypes.string.isRequired
-};
+  text: PropTypes.string.isRequired,
+}
 
-export default InfoValue;
+export default InfoValue
