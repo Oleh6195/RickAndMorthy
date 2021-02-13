@@ -7,7 +7,7 @@ import { getCharacter, getEpisodes } from '../../api'
 import InfoValue from '../../components/InfoValue/InfoValue'
 import InfoLabel from '../../components/InfoLabel'
 
-function UserDetail({ selectCharacter }) {
+function UserDetail() {
   const { id } = useParams()
   const [character, setCharacter] = useState('')
   const [episodes, setEpisodes] = useState([])
