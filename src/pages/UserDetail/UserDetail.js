@@ -1,7 +1,7 @@
 import './UserDetail.scss'
 import Tag from '../../components/Tag'
 import InfoView from '../../components/InfoView/InfoView'
-import { NavLink, useParams } from 'react-router-dom'
+import { Link, NavLink, useParams } from 'react-router-dom'
 import { useEffect, useState } from 'react'
 import { getCharacter, getEpisodes } from '../../api'
 import InfoValue from '../../components/InfoValue/InfoValue'
@@ -21,7 +21,11 @@ function UserDetail() {
   }
 
   const renderEpisode = (episode) => {
-    return <InfoValue key={episode.id} text={episode.name} />
+    return (
+      <Link className="DetailedUser__link" to={`../episode/${episode.id}`}>
+        <InfoValue key={episode.id} text={episode.name} />
+      </Link>
+    )
   }
 
   const loadData = async () => {
@@ -35,7 +39,7 @@ function UserDetail() {
 
   const { name, status, gender, species, origin, created, image, location } =
     character || {}
-
+  const formattedDate = new Date(created).toDateString()
   return character ? (
     <div className="DetailedUser">
       <p className="DetailedUser__navText">
@@ -75,7 +79,7 @@ function UserDetail() {
             <div className="DetailedUser__description__content_userInfo">
               <InfoView label="Species:" value={species} />
               <InfoView label="Origin:" value={origin.name} />
-              <InfoView label="Birthday:" value={created} />
+              <InfoView label="Birthday:" value={formattedDate} />
               <InfoView label="Last known location:" value={location.name} />
               <InfoView label="First seen in:" value={origin.name} />
             </div>

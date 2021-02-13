@@ -1,0 +1,53 @@
+.EpisodeDetail {
+  background: var(--text-dark);
+  padding: 70px 120px;
+
+  &__link {
+    text-decoration: none;
+  }
+
+  &__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    padding: 40px 40px;
+    background: var(--text-dark-overlayed);
+    border-radius: 12px;
+  }
+
+  &__description {
+    margin-left: 48px;
+
+    &_title {
+      font-style: normal;
+      font-weight: bold;
+      font-size: 56px;
+      line-height: 66px;
+      display: flex;
+      align-items: flex-end;
+      color: var(--text-white);
+      margin-top: 0;
+    }
+
+    &__content {
+      justify-content: left;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      padding: 40px 0;
+      background: var(--text-dark-overlayed);
+      border-radius: 12px;
+
+      &_userInfo {
+        display: flex;
+        flex-direction: column;
+      }
+
+      &_episodes {
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+      }
+    }
+  }
+}

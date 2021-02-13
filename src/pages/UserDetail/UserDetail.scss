@@ -2,6 +2,10 @@
   background: var(--text-dark);
   padding: 70px 120px;
 
+  &__link {
+    text-decoration: none;
+  }
+
   &__container {
     display: flex;
     flex-wrap: wrap;
